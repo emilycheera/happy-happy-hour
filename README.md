@@ -17,12 +17,12 @@ __API:__ TomTom API<br/>
 #### Landing Page
 Users can search the map powered by TomTom's API for local happy hour offers.
 
-![alt text]("" "Happy Happy Hour landing page")
+![alt text](https://github.com/emilycheera/happy-happy-hour/blob/master/static/image/landing-page.png?raw=true "Happy Happy Hour landing page")
 
 #### Restaurant Dashboard
 After restaurant owners register an account and login, they can post an offer to display on the map.
 
-![alt text]("" "Happy Happy Hour restaurant dashboard")
+![alt text](https://github.com/emilycheera/happy-happy-hour/blob/master/static/image/dashboard.png?raw=true "Happy Happy Hour restaurant dashboard")
 
 
 ## <a name="future"></a>Future State
