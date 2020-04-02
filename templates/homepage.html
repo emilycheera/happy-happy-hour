@@ -2,10 +2,6 @@
 {% block head %}
 {{ super() }}
 <head class='use-all-space'>
-  <title>HAPPY HAPPY HOUR</title>
-  <meta http-equiv='X-UA-Compatible' content='IE=Edge' />
-  <meta charset='UTF-8'>
-  <title>Maps SDK for Web - Vector map</title>
   <meta name='viewport'
         content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'/>
   <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.45.0/maps/maps.css'>
@@ -19,23 +15,23 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-3">
-      <div id="flash-messages">
+      <div>
         {% with messages = get_flashed_messages() %}
           {% if messages %}
             {% for message in messages %}
-              <p>{{ message }}</p>
+              <p class="alert alert-primary mt-3" role="alert">{{ message }}</p>
             {% endfor %}
           {% endif %}
         {% endwith %}
-    </div>
+      </div>
       <h6 id="tagline">
         Search below for food and drink deals that are happy for you, the restaurant, and the planet. Oh wait, that's a happy happy <i>happy</i> hour.
       </h6>
       <form id="search" action="/map">
-        <div class="form-inline address-search">
+        <div class="form-group">
           <label for="location">Your address:</label>
-          <input  type="text" required class="form-control-sm" id="location" name="location">
-          <button type="submit" class="btn btn-primary">Search</button>
+          <input type="text" required class="form-control" id="location" name="location">
+          <button type="submit" class="btn btn-primary btn-block">Search</button>
         </div>
       </form>
       <form id="filter" action="/map">
