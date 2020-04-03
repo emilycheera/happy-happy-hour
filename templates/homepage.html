@@ -14,7 +14,7 @@
 {% block content %}
 <div class="container-fluid">
   <div class="row">
-    <div class="col-3">
+    <div class="col-3 sidesearch">
       <div>
         {% with messages = get_flashed_messages() %}
           {% if messages %}
@@ -38,13 +38,19 @@
         <div class="form-group">
           <label for="name">Restaurant Name:</label>
           <input type="text" name="name" class="form-control form-filter">
+        </div>
+        <div class="form-group">
           <label for="start-time">Start Time:</label>
           <input type="datetime-local" class="form-control form-filter" name="start-time">
+        </div>
+        <div class="form-group">
           <label for="end-time">End Time: </label>
           <input type="datetime-local" class="form-control form-filter" name="end-time">
+        </div>
+        <div class="form-group">
           <label for="price">Deal Price: $</label>
           <input type="number" class="form-control form-filter" name="price" step="any" min=0>
-          <button type="submit" class="btn btn-primary">Filter</button>
+          <button type="submit" class="btn btn-primary btn-block">Filter</button>
         </div>
       </form>
     </div>

@@ -1,9 +1,9 @@
-#tagline {
-    margin-top: 20px;
-    margin-bottom: 20px;
+.sidesearch {
+    height: 100vh;
 }
 
-.form-filter {
+#tagline {
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
