@@ -69,7 +69,7 @@ def get_restaurants_as_json():
         query = rest["address"]
         req_tom = requests.get(f"https://api.tomtom.com/search/2/search/{query}.json?key=UEMHJeLAHMvvGsWGtxGl2NB9hNZXtpsm")
         search_results = req_tom.json()
-        first_result = search_results.get("results")[1]
+        first_result = search_results.get("results")[0]
         lat_lon = first_result.get("position")
         # Update dictionary with lat/lon
         rest["coordinate"] = [lat_lon["lon"], lat_lon["lat"]]

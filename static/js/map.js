@@ -1,15 +1,12 @@
-const SanFrancisco = 'San Francisco, California'
+const SanFrancisco = 'San Francisco, California';
 let coordinates = [[-122.46066, 37.78287],[-122.40205,37.78164],[-122.43744, 37.7724],[-122.47765, 37.76379]];
 let markers = [];
-
-let restaurants
+let restaurants;
 
 $.get('/restaurant-object', (res) => {
-    console.log(res);
     let restaurants = res;
 
     for (const rest of Object.values(restaurants)){
-        console.log(rest);
         marker = new tt.Marker().setLngLat(rest.coordinate).addTo(map);
         var popup = new tt.Popup({offset: popupOffsets}).setHTML(`<b>${rest.name}</b><br>${rest.address}, ${rest.city}, ${rest.state}, ${rest.zipcode}<br><b>Offers:</b> ${rest.offer}`);
         marker.setPopup(popup).togglePopup();
